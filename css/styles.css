@@ -1,0 +1,235 @@
+/* ===== BASE ===== */
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+  --light-grayish-blue: hsl(240, 22%, 87%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-image: url(../images/pattern-curve.svg),
+    url(../images/pattern-bg.svg);
+  background-position: bottom left, 51rem 6rem;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  position: relative;
+}
+
+.testimonial {
+  width: 69.375rem;
+  height: 33.75rem;
+  /* background: grey; */
+  display: none;
+}
+
+/* ===== TEXT COMPONENT ===== */
+
+.testimonial__text {
+  height: 100%;
+  width: calc(100% - 48.6%);
+  /* background: orangered; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--dark-blue);
+  position: relative;
+}
+
+.testimonial__text::before {
+  content: "";
+  background-image: url(../images/pattern-quotes.svg);
+  /* background: red; */
+  width: 7.5rem;
+  height: 6.25rem;
+  position: absolute;
+  top: 4.75rem;
+  left: 6rem;
+}
+
+.testimonial__text--quote {
+  font-size: 2rem;
+  font-weight: 300;
+  width: 39.6875rem;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial__text--info {
+  display: flex;
+  align-items: flex-end;
+  height: 2.2rem;
+  /* background: red; */
+}
+
+.testimonial__text--name {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.testimonial__text--title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--grayish-blue);
+}
+
+/* ===== IMAGE COMPONENT ===== */
+.testimonial__image {
+  width: 48.6%;
+  /* height: 100%; */
+  box-shadow: 0 40px 50px -30px rgba(36, 36, 113, 0.5);
+  /* background: seagreen; */
+}
+
+.testimonial__image img {
+  border-radius: 0.3125rem;
+}
+
+/* ===== BUTTON COMPONENT ===== */
+.btn-container {
+  position: absolute;
+  right: 25rem;
+  bottom: -1.5rem;
+  border-radius: 1.75rem;
+  background: #fff;
+  width: 7rem;
+  height: 3.5rem;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 15px 20px -10px rgba(36, 36, 113, 0.1);
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.btn-prev:focus {
+  outline: none;
+  background: var(--light-grayish-blue);
+  border-radius: 1.75rem 0 0 1.75rem;
+}
+
+.btn-next:focus {
+  outline: none;
+  background: var(--light-grayish-blue);
+  border-radius: 0 1.75rem 1.75rem 0;
+}
+
+/* ===== HELPERS ===== */
+.active {
+  display: flex;
+}
+
+/* ===== ATTRIBUTION ===== */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 70.625em) {
+  body {
+    background-position: bottom left, center 1.5rem;
+    background-repeat: no-repeat;
+    background-size: 17.8125rem, 20.4375rem;
+    align-items: flex-start;
+  }
+
+  .testimonial {
+    /* background: #eee; */
+    width: 20.4375rem;
+    height: 33rem;
+  }
+
+  .testimonial__image {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 4rem 0;
+  }
+
+  .testimonial__text {
+    order: 2;
+    width: 19.4375rem;
+    text-align: center;
+  }
+
+  .testimonial__text::before {
+    background-size: cover;
+    width: 3.75rem;
+    height: 3.125rem;
+    top: -1.25rem;
+    left: 7rem;
+  }
+
+  .testimonial__text--quote {
+    font-size: 1.125rem;
+    width: 100%;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+
+  .testimonial__text--info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial__text--info > * {
+    font-size: 0.9375rem;
+  }
+
+  testimonial__text--name {
+    margin-bottom: 0.5rem;
+  }
+
+  .testimonial__image img {
+    width: 15.875rem;
+    height: 15.8125rem;
+  }
+
+  .btn-container {
+    right: 8rem;
+    bottom: 13rem;
+    width: 5rem;
+    height: 2.5rem;
+  }
+
+  .btn img {
+    width: 0.5rem;
+  }
+
+  .active {
+    flex-direction: column;
+    align-items: center;
+  }
+}

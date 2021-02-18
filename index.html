@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/styles.css">
+
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <div class="container">
+    <div class="testimonial active">
+      <div class="testimonial__text">
+        <h1 class="testimonial__text--quote">“ I’ve been interested in coding for a while but never taken the jump,
+          until
+          now.
+          I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+          excited about the future. ”</h1>
+        <div class="testimonial__text--info">
+          <h2 class="testimonial__text--name">Tanya Sinclair</h2>
+          <h3 class="testimonial__text--title">UX Engineer</h3>
+        </div>
+      </div>
+      <div class="testimonial__image">
+        <img src="./images/image-tanya.jpg" alt="testimonial image of tonya">
+      </div>
+    </div>
 
-  “ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”
+    <div class="testimonial">
+      <div class="testimonial__text">
+        <h1 class="testimonial__text--quote">“ If you want to lay the best foundation possible I’d recommend taking this
+          course.
+          The depth the instructors go into is incredible. I now feel so confident about
+          starting up as a professional developer. ”</h1>
+        <div class="testimonial__text--info">
+          <h2 class="testimonial__text--name">John Tarkpor</h2>
+          <h3 class="testimonial__text--title">Junior Front-end Developer</h3>
+        </div>
+      </div>
+      <div class="testimonial__image">
+        <img src="./images/image-john.jpg" alt="testimonial image of john" class="profile-pic">
+      </div>
+    </div>
 
-  Tanya Sinclair
-  UX Engineer
-
-  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-
-  John Tarkpor
-  Junior Front-end Developer
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <!-- TODO: change to two different buttons the butt up against each other (moon landing!) -->
+    <div class="btn-container">
+      <button class="btn btn-prev">
+        <img src="./images/icon-prev.svg" alt="previous button">
+      </button>
+      <button class="btn btn-next">
+        <img src="./images/icon-next.svg" alt="previous button">
+      </button>
+    </div>
   </div>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
 </body>
+
 </html>
