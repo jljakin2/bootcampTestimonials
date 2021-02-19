@@ -33,12 +33,19 @@ body {
 /* ===== LAYOUT ===== */
 .container {
   position: relative;
+  width: 69.375rem;
+  height: 33.75rem;
+  /* overflow: hidden; */
 }
 
 .testimonial {
   width: 69.375rem;
   height: 33.75rem;
   /* background: grey; */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
   display: none;
 }
 
@@ -119,6 +126,7 @@ body {
   justify-content: space-around;
   align-items: center;
   box-shadow: 0 15px 20px -10px rgba(36, 36, 113, 0.1);
+  /* z-index: 10000; */
 }
 
 .btn {
@@ -157,12 +165,19 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
+/* ===== MEDIA QUERY ===== */
+
 @media only screen and (max-width: 70.625em) {
   body {
     background-position: bottom left, center 1.5rem;
     background-repeat: no-repeat;
     background-size: 17.8125rem, 20.4375rem;
     align-items: flex-start;
+  }
+
+  .container {
+    width: 20.4375rem;
+    height: 33rem;
   }
 
   .testimonial {
@@ -208,7 +223,7 @@ body {
     font-size: 0.9375rem;
   }
 
-  testimonial__text--name {
+  .testimonial__text--name {
     margin-bottom: 0.5rem;
   }
 
